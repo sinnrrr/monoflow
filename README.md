@@ -2,15 +2,34 @@
 <h1>Monobank + MoneyFlow = 💕</h1>
 A tool for syncing Monobank transactions with Money Flow app
 
-## Getting Started
+## Features
 
-### Install dependencies
+*   ⚡ Blazingly Fast
+*   💸 Multi-currency support
+*   👤 Thorough account picker (through `config.py`)
+
+## Prepare it
+
+Git clone this repository or download *zip* archive from UI and extract it
+
+#### Install dependencies
+
+Go to this project folder (where you've unpacked this repository) and run
 
 ```sh
 poetry install
 ```
 
-### Export transactions
+#### Configure the app
+
+```sh
+mv ./monoflow/config.example.py ./monoflow/config.py
+```
+
+Open `./monoflow/config.py` file in your editor and change every variable
+to your needs (follow the doc comments)
+
+## Export transactions
 
 <a href="https://api.monobank.ua/docs/#tag/Kliyentski-personalni-dani/paths/~1personal~1statement~1{account}~1{from}~1{to}/get">Monobank API</a>
 has a limit of exprorting transactions (31 days past), <ins><b>this is why we need to select the time range of export</b></ins>
